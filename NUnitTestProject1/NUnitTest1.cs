@@ -3,13 +3,13 @@ using NUnit.Framework;
 
 namespace NUnitTestProject1
 {
-    //[TestFixture]
+    [TestFixture]
     public class NUnitTest1
     {
-        //[Test]
+        [Test]
         public void ClassicNunitTestMethod()
         {
-            Assert.IsFalse(false);            
+            Assert.True(1 == 1);
         }
     }
 }
