@@ -2,5 +2,5 @@ install:
 - cmd: nuget restore
 build_script:
 - cmd: |
-    msbuild "C:\projects\multipletestssamename\MultipleTestsSameName.sln" /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /p:Configuration=Release
-    msbuild "C:\projects\multipletestssamename\MultipleTestsSameName.sln" /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /p:Configuration=Debug
+    msbuild %APPVEYOR_BUILD_FOLDER%\MultipleTestsSameName.sln /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /p:Configuration=Release
+    msbuild %APPVEYOR_BUILD_FOLDER%\MultipleTestsSameName.sln /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /p:Configuration=Debug
